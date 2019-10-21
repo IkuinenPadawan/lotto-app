@@ -1,4 +1,4 @@
-# lotto-app
+# Lottery Application
 A simple lottery application that calculates how many years it takes to win the lottery. Each raffle takes one week and goal is to win the lottery within a lifetime (120 years). 
 
 ## Motivation
@@ -21,7 +21,7 @@ _Example 2 - Application asks user for unique lottery numbers as no numbers were
 _Example 3 - Main method is fairly short. It checks whether command line argument is usable with a method, if not it invokes a different method to ask for unique numbers and then runs the lottery._
 ![exMain](https://user-images.githubusercontent.com/52252895/67207920-32802a80-f41d-11e9-896c-61724ad9320f.PNG)
 
-_Example 4 - Static variable where user can change lottery parameters and some wordings._
+_Example 4 - Static variables where user can change lottery parameters and some wordings._
 ![exStatic](https://user-images.githubusercontent.com/52252895/67207921-32802a80-f41d-11e9-8031-8286d3dd1c39.PNG)
 
 ## Code Examples
