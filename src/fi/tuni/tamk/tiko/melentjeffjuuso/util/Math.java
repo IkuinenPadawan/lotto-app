@@ -16,6 +16,13 @@ public class Math {
     public static int getRandom(int min, int max) {
         return min + (int) (java.lang.Math.random() * ((max - min) + 1));
     }
+ /**
+ * removeIndex method removes a certain index from given array.
+ * 
+ * @param arr Array from which the index will be removed.
+ * @param index Index to be removed from.
+ * @return Returns the array with the given index removed.
+ */
     public static int[] removeIndex(int[] arr, int index) {
         int[] removedIdx = new int [arr.length -1];
         for (int i = 0, k = 0; i < arr.length; i++) {
