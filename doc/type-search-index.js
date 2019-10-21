@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"fi.tuni.tamk.tiko.melentjeffjuuso.util","l":"Arrays"},{"p":"fi.tuni.tamk.tiko.melentjeffjuuso.util","l":"Console"},{"p":"fi.tuni.tamk.tiko.melentjeffjuuso","l":"Main"},{"p":"fi.tuni.tamk.tiko.melentjeffjuuso.util","l":"Math"}]
