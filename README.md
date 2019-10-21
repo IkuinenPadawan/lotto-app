@@ -4,8 +4,8 @@ A simple lottery application that calculates how many years it takes to win the 
 ## Motivation
 A school project to create a lottery application that calculates how many years it takes to win the lottery with user's given numbers. In addition, besides getting the application to function properly, goal was to learn javadoc and to create and import packages.
 
-## Features
-User can give the lottery numbers in the command line when running the program. Program then checks if those numbers are usable and runs the lottery. If numbers were unusable the application will ask for the numbers until they are unique and withing the range of the usable numbers of the lottery.
+## Features and how it works
+User can give the lottery numbers in the command line when running the program. Program then checks if those numbers are usable and runs the lottery. If numbers were unusable the application will ask for the numbers until they are unique and within the range of the usable numbers of the lottery.
 
 Each raffle takes one week and lottery will be run until user wins the lottery. App then prints out how many years it took to get each lottery number right. If it took more than a person's lifetime (120 years) to win the lottery, application will run the lottery again.
 
@@ -30,5 +30,24 @@ It took a while to figure out how to add scaleability. Especially when the app p
     for (int i = 1; i <= LOTTONUMS; i++) {
         if(yearsLotto[i - 1] > -1) {
             System.out.println("Got " + i + " right! Took " + yearsLotto[i - 1] + " years");
+        }
+    }
+    
+    
+While-loop for checking if user has won, keeping track of time passed and saving years passed for each lottery number. calculateLottery method returns a randomized array of lottery numbers and saves it to int array 'lot'. Then it invokes a method from Arrays class to check how many numbers were the same and saves that number to sameValues variable. After that it checks if user got at least one number right and if yearsLotto (where years passed is saved for each lottery number) is -1 i.e. that is the first time user has gotten that amount of numbers right. If those conditions are met, accumulated years value is saved for that number in the yearsLotto array.  
+
+    while (!win) {
+        int [] lot = calculateLottery();
+        int sameValues = Arrays.containsSameValues(userLotto,lot);
+        weeks++;
+        if (sameValues > 0 && yearsLotto[sameValues - 1] == -1) {
+            yearsLotto[sameValues - 1] = YEARS;
+        } 
+        if (sameValues == LOTTONUMS) {
+            win = true;
+        }
+        if (weeks == 52) {
+            weeks = 0;
+            YEARS++;
         }
     }
