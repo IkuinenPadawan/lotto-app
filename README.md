@@ -18,8 +18,14 @@ Application running using the command line argument as user's lottery numbers. "
 Example 2 - Application asks user for unique lottery numbers as no numbers were given as command line argument or the numbers given were incorrect. As shown in the screenshot, application takes into account incorrect user inputs.
 ![ex2](https://user-images.githubusercontent.com/52252895/67207523-732b7400-f41c-11e9-8da4-ee9917775768.PNG)
 
+Example 3 - Main method is fairly short. It checks whether command line argument is usable with a method, if not it invokes a different method to ask for unique numbers and then runs the lottery.
+![exMain](https://user-images.githubusercontent.com/52252895/67207920-32802a80-f41d-11e9-896c-61724ad9320f.PNG)
+
+Example 4 - Static variable where user can change lottery parameters and some wordings.
+![exStatic](https://user-images.githubusercontent.com/52252895/67207921-32802a80-f41d-11e9-8031-8286d3dd1c39.PNG)
+
 ## Code Examples
-It took a while to figure out how to add scaleability. Especially when the app prints out how many years it took to get each number right. For example if user wanted to use 9 lottery numbers instead of 7. Solution was to save the years passed inside an array for each lottery number and use for loop to print.
+It took a while to figure out how to add scaleability. Especially when the app prints out how many years it took to get each number right. For example if user wanted to use 9 lottery numbers instead of 7. Solution was to save the years passed inside an array (yearsLotto) for each lottery number and use for loop for printing.
 
     for (int i = 1; i <= LOTTONUMS; i++) {
         if(yearsLotto[i - 1] > -1) {
